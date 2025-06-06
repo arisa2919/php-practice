@@ -111,7 +111,7 @@ function evaluateGrade($score){
     default:
       return '判定不明です。講師に問い合わせてください。';
       break;
-    
+  
   }
 }
 

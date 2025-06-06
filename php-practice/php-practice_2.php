@@ -62,29 +62,29 @@ class Student
     }
     public function attend($subject)
     {
-        echo $this -> studentName . 'は' . $subject . 'の授業に参加しました。学籍番号:' . $this -> studentId;
+        echo $this->studentName . 'は' . $subject . 'の授業に参加しました。学籍番号:' . $this->studentId;
     }
 }
 
 // Q3
 $yamada = new Student(22 , '山田');
-echo '学籍番号' . $yamada -> studentId . '番の生徒は' . $yamada -> studentName . 'です。';
+echo '学籍番号' . $yamada-> studentId . '番の生徒は' . $yamada->studentName . 'です。';
 
 // Q4 オブジェクト-2
 
-echo $yamada -> attend('PHP');
+echo $yamada->attend('PHP');
 
 // Q5 定義済みクラス
 // Q5-1
 $pastMonth = new DateTime();
-$pastMont -> modify('-30days');
-echo $pastMonth -> format('Y-m-d');
+$pastMont->modify('-30days');
+echo $pastMonth->format('Y-m-d');
 
 // Q5-2
 $currentDate = new DateTime ();
 $pastDate = new DateTime ('1992-04-25');
-$days = $currentDate -> diff($pastDate);
-echo 'あの日から' . $days -> days . '日経過しました。';
+$days = $currentDate->diff($pastDate);
+echo 'あの日から' . $days->days . '日経過しました。';
 
 
 ?>
