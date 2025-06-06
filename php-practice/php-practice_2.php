@@ -39,7 +39,7 @@ echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel']
 foreach($personalInfos as $number => $infos){
     $n = $number + 1;
     echo $n . '番目の' . $infos['name'] . 'のメールアドレスは' . $infos['mail'] . 'で、電話番号は' . $infos['tel'] . 'です。' . "\n";
-    }
+}
 
     // Q2-3
 $ageList = [25, 30, 18];
@@ -60,11 +60,9 @@ class Student
         $this->studentId = $id;
         $this->studentName = $name;
     }
-
     public function attend($subject)
     {
         echo $this -> studentName . 'は' . $subject . 'の授業に参加しました。学籍番号:' . $this -> studentId;
-
     }
 }
 

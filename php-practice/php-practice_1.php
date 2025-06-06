@@ -10,25 +10,22 @@ echo $num ."\n" . $num2;
 
 // Q3 日付操作
 $currentTime = new DateTime();
-$currentTime -> setTimezone(new DateTimezone('Asia/Tokyo'));
-echo $currentTime  -> format('Y年m月d日 H時i分s秒');
+$currentTime->setTimezone(new DateTimezone('Asia/Tokyo'));
+echo $currentTime->format('Y年m月d日 H時i分s秒');
 
 // Q4 条件分岐-1 if文
+
 $device = 'windows';
 if ($device == 'windows' || $device == 'mac'){
-  if($device == 'windows'){
-    echo 'windows';
-    }else{
-    echo 'mac';
-  }
-  }else{
+  echo '使用OSは、' . $device . 'です。'; 
+}else{
     echo 'どちらでもありません。';
 }
+
 // Q5 条件分岐-2 三項演算子
 $age = 22;
-$adult = ($age >= 18)?'成人です': '未成年です。';
+$adult = ($age >= 18) ? '成人です' : '未成年です。';
 echo $adult;
-
 
 // Q6 配列 
 $areas = ['東京都','神奈川県','栃木県','千葉県','茨城県','群馬県','埼玉県'];
@@ -41,7 +38,7 @@ $cities = [
   '埼玉県' => 'さいたま市',
   '栃木県' => '宇都宮市',
   '群馬県' => '前橋市',
-  '茨城県' => '水戸市'
+  '茨城県' => '水戸市',
 ];
 
 foreach ($cities as $key => $city){
@@ -64,7 +61,8 @@ foreach ($cities as $key => $city){
 }
 
 // Q10 関数-1
-function hello($name){
+function hello($name)
+{
   echo $name .'さん、こんにちは。';
 }
 hello('金谷');
@@ -99,19 +97,19 @@ function evaluateGrade($score){
   switch($score){
     case 'A':
     case 'B':
-      echo '合格です。';
+    return '合格です。';
       break;
     
     case 'C':
-      echo '合格ですが追加課題があります。';
+      return '合格ですが追加課題があります。';
       break;
     
     case 'D':
-      echo '不合格です。';
+      return '不合格です。';
       break;
     
     default:
-      echo '判定不明です。講師に問い合わせてください。';
+      return '判定不明です。講師に問い合わせてください。';
       break;
     
   }
