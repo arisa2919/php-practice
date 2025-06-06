@@ -18,7 +18,7 @@ echo $currentTime->format('Y年m月d日 H時i分s秒');
 $device = 'windows';
 if ($device == 'windows' || $device == 'mac'){
   echo '使用OSは、' . $device . 'です。'; 
-}else{
+} else {
     echo 'どちらでもありません。';
 }
 
@@ -55,7 +55,7 @@ $cities['京都府'] = '京都市';
 foreach ($cities as $key => $city){
   if ($city == '大阪市' || $city == '京都市'){
     echo $key . 'は関東地方ではありません。' . "\n";
-  }else{
+  } else {
     echo $key . 'の県庁所在地は、' . $city . 'です。' . "\n";
   }
 }
@@ -83,9 +83,9 @@ echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 
 // Q12 関数とif文
 function distinguishNum($number){
-  if($number % 2 !== 0){
+  if ($number % 2 !== 0){
     return $number . 'は奇数です。';
-  }else{
+  } else {
     return $number . 'は偶数です。';
   }
 }
@@ -94,11 +94,11 @@ echo distinguishNum(3);
 
 // Q13 関数とswitch文
 function evaluateGrade($score){
-  switch($score){
+  switch ($score){
     case 'A':
     case 'B':
-    return '合格です。';
-      break;
+     return '合格です。';
+     break;
     
     case 'C':
       return '合格ですが追加課題があります。';
